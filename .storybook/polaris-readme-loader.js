@@ -44,9 +44,7 @@ module.exports = function loader(source) {
     return `
 const ${example.storyName}Component = (${example.code})();
 export function ${example.storyName}() {
-  return <div data-omit-app-provider="${readme.omitAppProvider}"><${
-      example.storyName
-    }Component /></div>;
+  return <${example.storyName}Component />;
 }
 
 ${example.storyName}.storyName = ${JSON.stringify(example.name)};
